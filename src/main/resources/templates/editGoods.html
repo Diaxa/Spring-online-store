@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method = "post" th:action="@{/postGoodsToDatabase}" th:object="${goods}">
+<label>Category:</label>
+<input th:field="*{category}"th:value="*{category}"><br>
+<p th:each="err : ${#fields.errors('category')}" th:text="${err}"></p>
+<label>Goods code:</label>
+<input th:field="*{goodsCode}" th:value="*{goodsCode}"><br>
+<p th:each="err : ${#fields.errors('goodsCode')}" th:text="${err}"></p>
+<label>Price:</label>
+<input th:field="*{price}"th:value="*{price}"><br>
+<p th:each="err : ${#fields.errors('price')}" th:text="${err}"></p>
+ <label>Color:</label>
+<input th:field="*{color}"th:value="*{color}"><br>
+<p th:each="err : ${#fields.errors('color')}" th:text="${err}"></p>
+
+
+<br></br>
+<p th:if="${#fields.hasErrors()}">There was errors!</p>
+
+
+
+
+<input type="submit">
+
+
+
+
+
+
+</form>
+
+</body>
+</html>

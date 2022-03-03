@@ -1,0 +1,8 @@
+1,Edit goods
+2,Add goods
+3,Find all goods
+4,Find goods by goods code
+5,Find goods by id
+6,Find goods by price between
+7,Update goods
+8,Delete goods

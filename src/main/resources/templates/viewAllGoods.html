@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>All animals</title>
+</head>
+<body>
+<ul> <li th:each="goods : ${goods}">
+    <ul>
+        <li th:text="'Category:' + ${goods.category}"></li>
+        <li th:text="'Goods code:'+${goods.goodsCode}"></li>
+        <li th:text="'Price:'+${goods.price}"></li>
+        <li th:text="'Color:'+${goods.color}"></li>
+        <li><a th:href="@{~/updateGoods/__${goods.id}__}">Atjaunot</a></li>
+
+    </ul>
+</li>
+</ul>
+
+
+
+</body>
+</html>
